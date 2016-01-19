@@ -43,6 +43,8 @@
 # Copyright 2016 Your name here, unless otherwise noted.
 #
 class base {
+  include ::motd
+
   class { '::ntp':
     servers => ['time01.samdom.aussieswithtails.fuzzbutt'],
   }
