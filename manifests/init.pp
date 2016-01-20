@@ -43,32 +43,32 @@
 # Copyright 2016 Your name here, unless otherwise noted.
 #
 class base {
-  include ::motd
+#  include ::motd
 
-  class { '::ntp':
-    servers => ['time01.samdom.aussieswithtails.fuzzbutt'],
-  }
+#  class { '::ntp':
+#    servers => ['time01.samdom.aussieswithtails.fuzzbutt'],
+#  }
 
-  class { '::ssh':
-    permit_root_login                => 'no',
-    sshd_config_allowusers           => ['administrator',],
-    sshd_ignorerhosts                => 'yes',
-    ssh_config_server_alive_interval => 300,
-    sshd_config_loglevel             => 'ERROR',
-    sshd_config_hostkey              => ['/etc/ssh/ssh_host_rsa_key', '/etc/ssh/ssh_host_dsa_key'],
-    service_ensure                   => running,
-    service_enable                   => true,
-  }
+#  class { '::ssh':
+#    permit_root_login                => 'no',
+#    sshd_config_allowusers           => ['administrator',],
+#    sshd_ignorerhosts                => 'yes',
+#    ssh_config_server_alive_interval => 300,
+#    sshd_config_loglevel             => 'ERROR',
+#    sshd_config_hostkey              => ['/etc/ssh/ssh_host_rsa_key', '/etc/ssh/ssh_host_dsa_key'],
+#    service_ensure                   => running,
+#    service_enable                   => true,
+#  }
 
-  ::base::user { 'administrator':
-    gid         => '1000',
-    home        => "/home/administrator",
-    id          => 'administrator',
-    passwd      => '9073guss',
-    realname    => 'Administrator Account',
-    shell       => '/usr/bin/zsh',
-    state       => present,
-    sgroups     => [],
-    uid         => '1000',
-  }
+#  ::base::user { 'administrator':
+#    gid         => '1000',
+#    home        => "/home/administrator",
+#    id          => 'administrator',
+#    passwd      => '9073guss',
+#    realname    => 'Administrator Account',
+#    shell       => '/usr/bin/zsh',
+#    state       => present,
+#    sgroups     => [],
+#    uid         => '1000',
+#  }
 }
