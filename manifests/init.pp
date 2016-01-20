@@ -45,9 +45,9 @@
 class base {
 #  include ::motd
 
-#  class { '::ntp':
-#    servers => ['time01.samdom.aussieswithtails.fuzzbutt'],
-#  }
+  class { '::ntp':
+    servers => ['time01.samdom.aussieswithtails.fuzzbutt'],
+  }
 
 #  class { '::ssh':
 #    permit_root_login                => 'no',
